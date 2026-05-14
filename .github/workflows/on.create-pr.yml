@@ -6,18 +6,19 @@ jobs:
   validate-scripts:
     runs-on: ubuntu-latest
     name: Validate K6 Scripts
-steps:
-  - name: Checkout code
-    uses: actions/checkout@v4
     
-  - uses: grafana/setup-k6-action@v1
-    with:
-      browser: true
-      
-  - uses: grafana/run-k6-action@v1
-    with:
-      path: |
-        ./scripts/*.js
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - uses: grafana/setup-k6-action@v1
+        with:
+          browser: true
+          
+      - uses: grafana/run-k6-action@v1
+        with:
+          path: |
+            ./scripts/*.js
 
   terraform-plan:
     runs-on: ubuntu-latest
