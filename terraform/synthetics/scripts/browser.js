@@ -2,6 +2,7 @@ import { browser } from "k6/browser";
 import { check } from "https://jslib.k6.io/k6-utils/1.5.0/index.js";
 import { sleep } from "k6";
 
+
 export const options = {
   scenarios: {
     ui: {
