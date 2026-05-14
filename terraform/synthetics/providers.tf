@@ -1,3 +1,4 @@
+
 provider "grafana" {
   url             = "https://gommarah.grafana.net/"
   auth            = var.grafana_service_token
