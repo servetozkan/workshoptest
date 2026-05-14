@@ -20,7 +20,7 @@ jobs:
       - uses: grafana/run-k6-action@v1
         with:
           path: |
-            ./scripts/*.js
+            ./terraform/synthetics/scripts/*.js
 
   terraform-apply:
     runs-on: ubuntu-latest
